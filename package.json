@@ -4,7 +4,7 @@
   "description": "新首页",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --config webpack.test.js && font-spider ./dist/*.html",
+    "test": "webpack --config webpack.test.js && font-spider ./dev/*.html",
     "dev": "webpack --config webpack.test.js -w",
     "build": "webpack --config webpack.prod.js && font-spider ./dist/*.html"
   },
