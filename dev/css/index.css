@@ -99,7 +99,7 @@ header .header .menu a {
   position: relative;
   color: #4A4A4A;
   line-height: 76px;
-  font-size: 17px;
+  font-size: 14px;
   text-decoration: none;
   display: block;
   height: 100%;
@@ -211,9 +211,9 @@ footer .foot .addressmap img {
 }
 .blk-frist .blkcent {
   position: relative;
-  height: 450px;
+  height: 250px;
   top: 50%;
-  margin-top: -225px;
+  margin-top: -150px;
 }
 .blk-frist p {
   text-align: center;

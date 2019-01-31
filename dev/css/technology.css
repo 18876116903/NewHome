@@ -94,7 +94,7 @@ header .header .menu a {
   position: relative;
   color: #4A4A4A;
   line-height: 76px;
-  font-size: 17px;
+  font-size: 14px;
   text-decoration: none;
   display: block;
   height: 100%;
@@ -226,20 +226,36 @@ footer .foot .addressmap img {
   margin-top: 30px;
 }
 .experience {
+  position: relative;
   margin-bottom: 200px;
 }
 .experience .blkcent {
+  position: relative;
   height: 360px;
   background: linear-gradient(314deg, #304ffe 0%, #6262fa 100%);
   border-radius: 8px;
   box-sizing: border-box;
-  padding: 60px 80px;
+}
+.experience .blkcent img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.experience .blkcent h2,
+.experience .blkcent p,
+.experience .blkcent button {
+  position: relative;
+  z-index: 5;
+  margin-left: 80px;
 }
 .experience .blkcent h2 {
   font-size: 40px;
   width: 440px;
   font-weight: 500;
   color: #ffffff;
+  padding-top: 60px;
 }
 .experience .blkcent p {
   font-size: 16px;
@@ -258,6 +274,7 @@ footer .foot .addressmap img {
   font-size: 22px;
   box-shadow: 20px 20px 60px 0px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  cursor: pointer;
 }
 .fixedcnt {
   position: absolute;

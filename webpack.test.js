@@ -11,6 +11,7 @@ module.exports = [{
         'about': './src/js/about.js',
         'technology': './src/js/technology.js',
         'jobs': './src/js/jobs.js',
+        'products': './src/js/products.js',
     },
     output: {
         path: path.join(__dirname, "dev"),
@@ -23,7 +24,7 @@ module.exports = [{
                 use: [{
                     loader: 'url-loader',
                     options: {
-                        limit: 81960,
+                        limit: 819600,
                         fallback: 'file-loader',
                     }
                 }, {
@@ -91,15 +92,15 @@ module.exports = [{
             filename: 'jobs.html',
             chunks: ['jobs']
         }),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'src/view/products.html'),
+            filename: 'products.html',
+            chunks: ['products']
+        }),
 
         new CopyWebpackPlugin([{
                 from: './src/view/img/',
                 to: './img/',
-                toType: 'dir'
-            },
-            {
-                from: './src/view/css/',
-                to: './css/',
                 toType: 'dir'
             },
             {

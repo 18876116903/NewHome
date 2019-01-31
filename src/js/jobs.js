@@ -7,8 +7,13 @@ require("../style/jobs.less");
 
 
 $(".project").on("click", ".title", function(){
-    $(".proactive").removeClass("proactive");
-    $(this).parent().addClass("proactive");
+    var pent = $(this).parent();
+    if (pent.hasClass("proactive")) {
+        $(".proactive").removeClass("proactive");
+    } else {
+        $(this).parent().addClass("proactive");
+    }
+    
     // $(this).parent().find(".prolist").slideDown();
 })
 

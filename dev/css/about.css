@@ -94,7 +94,7 @@ header .header .menu a {
   position: relative;
   color: #4A4A4A;
   line-height: 76px;
-  font-size: 17px;
+  font-size: 14px;
   text-decoration: none;
   display: block;
   height: 100%;
@@ -247,6 +247,13 @@ footer .foot .addressmap img {
 .foundingteam .card {
   margin-top: 76px;
 }
+.foundingteam .card .bg {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  width: 170px;
+  z-index: 0;
+}
 .foundingteam .card .carditem {
   position: relative;
   width: 570px;
@@ -271,6 +278,8 @@ footer .foot .addressmap img {
   font-size: 30px;
   margin-left: 120px;
   margin-top: 15px;
+  position: relative;
+  z-index: 10;
 }
 .foundingteam .card .carditem .posi {
   margin-left: 120px;
@@ -278,11 +287,15 @@ footer .foot .addressmap img {
   color: #4A4A4A;
   font-size: 16px;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 10;
 }
 .foundingteam .card .carditem p {
   font-size: 14px;
   color: #595F6F;
   line-height: 30px;
+  position: relative;
+  z-index: 10;
 }
 .foundingteam .card .left {
   float: left;
