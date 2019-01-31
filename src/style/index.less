@@ -44,9 +44,17 @@
 }
 
 .blk-frist {
-    margin-top: 76px;
-    padding-top: 240px;
-    height: 500px;
+    position: relative;
+    height: 90%;
+    overflow: hidden;
+
+    .blkcent {
+        position: relative;
+        height: 450px;
+        top: 50%;
+        margin-top: -225px;
+    }
+    
     p {
         text-align: center;
         color: #3D3D3D;
@@ -58,6 +66,17 @@
     }
     .link {
         text-align: center;
+    }
+    .mouse {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 50px;
+        img {
+            display: block;
+            height: 47px;
+            margin: 0 auto;
+        }
     }
 }
 
