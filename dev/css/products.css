@@ -1,0 +1,398 @@
+@font-face {
+  font-family: "hbfont";
+  src: url(../font/PingFangMedium.ttf);
+}
+@font-face {
+  font-family: "hbfonten";
+  src: url(../font/RobotoThinItalic.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-size: 17px;
+  width: 100%;
+  height: 100%;
+  font-family: "hbfont", "hbfonten";
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.gb-container {
+  min-width: 1200px;
+  overflow: visible;
+  margin: 0 auto;
+  height: 100%;
+}
+.gb-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.clearflaot::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.justify:after {
+  content: " ";
+  display: inline-block;
+  width: 100%;
+  height: 0;
+}
+.hover {
+  position: relative;
+}
+.hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: #496DEC;
+  transition-duration: 0.35s;
+}
+.hover:hover::before {
+  width: 100%;
+}
+
+header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 76px;
+  left: 0;
+  top: 0;
+  border: 1px solid #E8EAED;
+  z-index: 6000;
+}
+header .header {
+  position: relative;
+  height: 76px;
+  line-height: 76px;
+}
+header .header .logo {
+  float: left;
+}
+header .header .logo img {
+  position: relative;
+  height: 24px;
+  top: 10px;
+}
+header .header .menu {
+  float: right;
+}
+header .header .menu ul {
+  margin-left: 300px;
+}
+header .header .menu li {
+  float: left;
+  padding: 0 30px;
+}
+header .header .menu a {
+  position: relative;
+  color: #4A4A4A;
+  line-height: 76px;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+header .header .menu a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #1D1F66;
+  transition-duration: 0.35s;
+}
+header .header .menu a:hover::after {
+  left: 10%;
+  width: 80%;
+}
+header .header .menu .active a::after {
+  content: "";
+  display: block;
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  height: 2px;
+  background-color: #1D1F66;
+}
+
+footer {
+  position: relative;
+  padding: 100px 0;
+  border-top: 1px solid #E8EAED;
+}
+footer .foot {
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+}
+footer .foot .grid {
+  float: left;
+  margin-right: 200px;
+}
+footer .foot .grid h3 {
+  font-size: 14px;
+  color: #4A4A4A;
+}
+footer .foot .grid li {
+  font-size: 14px;
+  color: #808080;
+  margin-top: 15px;
+}
+footer .foot .addressmap {
+  float: right;
+  margin-right: 0;
+}
+footer .foot .addressmap img {
+  width: 470px;
+}
+
+.dubtitle {
+  text-align: center;
+}
+.dubtitle span {
+  color: #8E8E8E;
+  font-size: 26px;
+}
+.dubtitle h3 {
+  color: #4A4A4A;
+  font-size: 32px;
+  margin-top: 10px;
+}
+.blkcent {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 8000;
+}
+.mask {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.head {
+  position: relative;
+  margin-top: 76px;
+  overflow: hidden;
+  height: 600px;
+}
+.head .bgimg {
+  position: absolute;
+  width: 5000px;
+  height: 600px;
+  top: 0;
+  left: 50%;
+  margin-left: -2500px;
+  background-color: #fafafa;
+}
+.head .bgimg img {
+  position: relative;
+  display: block;
+  height: 130%;
+  margin: 0 auto;
+  top: -15%;
+}
+.head .blkcent {
+  box-sizing: border-box;
+  padding-left: 110px;
+}
+.head .blkcent h1 {
+  font-size: 48px;
+  width: 550px;
+  font-weight: bold;
+  color: #4d4d4d;
+  line-height: 61px;
+  margin-top: 120px;
+}
+.head .blkcent h2 {
+  font-size: 29px;
+  font-weight: 400;
+  color: #4a4a4a;
+  line-height: 41px;
+  margin-top: 25px;
+}
+.head .blkcent p {
+  width: 550px;
+  font-size: 15px;
+  color: #4a4a4a;
+  line-height: 25px;
+  margin-top: 15px;
+}
+.head .blkcent button {
+  width: 224px;
+  height: 60px;
+  background: linear-gradient(225deg, #fa2b56 0%, #f91c3d 100%);
+  box-shadow: 20px 20px 60px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-top: 60px;
+  font-size: 22px;
+  color: #ffffff;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.head .blkcent button:hover {
+  opacity: 0.8;
+}
+.apps {
+  margin-top: 80px;
+  margin-bottom: 130px;
+}
+.apps .left,
+.apps .right {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 410px;
+  float: left;
+}
+.apps .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.apps .applogo {
+  position: relative;
+  margin: 40px 0 0 30px;
+  width: 100px;
+  z-index: 10;
+}
+.apps p {
+  position: relative;
+  font-size: 14px;
+  color: #ffffff;
+  width: 210px;
+  margin-left: 40px;
+  line-height: 25px;
+  z-index: 10;
+}
+.apps .donwload {
+  position: absolute;
+  left: 30px;
+  bottom: 50px;
+  margin-left: 30px;
+}
+.apps .donwload img {
+  width: 110px;
+  margin-right: 20px;
+}
+.product .grid3 {
+  margin-top: 70px;
+}
+.product .griditem {
+  width: 33%;
+  padding: 0 50px;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+}
+.product .griditem .appicon {
+  width: 66px;
+  margin: 0 auto;
+  display: block;
+}
+.product .griditem h4 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #4A4A4A;
+  padding: 15px;
+}
+.product .griditem p {
+  font-size: 15px;
+  color: #666666;
+  line-height: 26px;
+  height: 90px;
+}
+.product .griditem a {
+  font-size: 18px;
+  color: #496DEC;
+  padding: 18px;
+}
+.product .griditem .apppage {
+  width: 260px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.tob {
+  margin: 150px 0;
+}
+.tob .dubtitle {
+  margin-bottom: 70px;
+}
+.tob .left,
+.tob .right {
+  position: relative;
+  float: left;
+  width: 46%;
+  margin: 0 2%;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0px 2px 26px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.tob .left img,
+.tob .right img {
+  width: 80px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border-radius: 50%;
+}
+.tob .left h4,
+.tob .right h4 {
+  font-size: 22px;
+  color: #4A4A4A;
+  margin-left: 120px;
+  font-weight: 400;
+}
+.tob .left p,
+.tob .right p {
+  margin-left: 120px;
+  line-height: 26px;
+  color: #666666;
+  margin-top: 10px;
+}
+.tob .left div,
+.tob .right div {
+  text-align: right;
+  margin-top: 20px;
+}
+.tob .left a,
+.tob .right a {
+  text-align: right;
+  color: #496DEC;
+  font-size: 18px;
+}
+
+
+/*# sourceMappingURL=products.css.map*/
