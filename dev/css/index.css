@@ -307,7 +307,16 @@ footer .foot .addressmap img {
   background-color: #aaa;
   border-radius: 8px;
 }
+.technology .merge .tech img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+}
 .technology .merge .tech p {
+  display: none;
   position: absolute;
   left: 30px;
   bottom: 20px;
