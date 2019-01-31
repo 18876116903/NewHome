@@ -221,12 +221,13 @@ footer .foot .addressmap img {
   padding-left: 110px;
 }
 .head .blkcent h1 {
-  font-size: 48px;
-  width: 550px;
+  font-size: 56px;
+  width: 450px;
   font-weight: bold;
   color: #4d4d4d;
-  line-height: 61px;
+  line-height: 72px;
   margin-top: 120px;
+  font-weight: 400;
 }
 .head .blkcent h2 {
   font-size: 29px;
