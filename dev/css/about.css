@@ -269,10 +269,10 @@ footer .foot .addressmap img {
 }
 .foundingteam .card .carditem .portrait {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  left: 45px;
-  right: 45px;
+  width: 140px;
+  height: 140px;
+  left: 20px;
+  top: 30px;
   border-radius: 50%;
 }
 .foundingteam .card .carditem .name {

@@ -298,16 +298,17 @@ footer .foot .addressmap img {
 .technology .merge {
   position: relative;
   margin-left: -18px;
-  width: 1098px;
+  width: 1240px;
   margin: 0 auto;
   margin-top: 100px;
+  margin-left: -15px;
 }
 .technology .merge .tech {
   position: relative;
   float: left;
-  width: 330px;
-  height: 154px;
-  margin: 0 18px;
+  width: 370px;
+  height: 170px;
+  margin: 0 20px;
   background-color: #aaa;
   border-radius: 8px;
 }
@@ -318,6 +319,8 @@ footer .foot .addressmap img {
   left: 0;
   top: 0;
   display: block;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.38) 0 2px 30px;
 }
 .technology .merge .tech p {
   display: none;
