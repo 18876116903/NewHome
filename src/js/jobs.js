@@ -1,24 +1,39 @@
+require("../style/fontfamily.less");
 require("../style/reset.less");
 require("../style/header.less");
 require("../style/footer.less");
 require("../style/public.less");
 require("../style/jobs.less");
 
+var bdmap = require("../modules/bdmap");
+bdmap();
 
 
-$(".project").on("click", ".title", function(){
+var arttemplate = require("../modules/artTemplate");
+
+var template = require("../template/job.art");
+
+
+$(".engineering").on("click", ".project .title", function () {
     var pent = $(this).parent();
     if (pent.hasClass("proactive")) {
-        $(".proactive").removeClass("proactive");
+        pent.removeClass("proactive");
     } else {
-        $(this).parent().addClass("proactive");
+        pent.addClass("proactive");
     }
-    
-    // $(this).parent().find(".prolist").slideDown();
 })
 
-$(".enggroup").on("click", ".gtil", function(){
-    $(".endactive").removeClass("endactive");
-    $(this).parent().addClass("endactive")
+$(".engineering").on("click", ".enggroup .gtil", function () {
+    var pent = $(this).parent();
+    if (pent.hasClass("endactive")) {
+        pent.removeClass("endactive");
+    } else {
+        pent.addClass("endactive");
+    }
 })
 
+
+$.get("./js/job.json", function (msg) {
+    var html = arttemplate.render(template, msg);
+    $(".engineering .blkcent").html(html)
+})

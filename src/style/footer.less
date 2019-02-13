@@ -4,36 +4,48 @@ footer {
     border-top: 1px solid #E8EAED;
     
     .foot {
+        box-sizing: border-box;
+        padding-left: 90px;
         position: relative;
         margin: 0 auto;
-        width: 1200px;
+        width: 1280px;
 
         .grid {
             float: left;
             margin-right: 200px;
 
             h3 {
-                font-size:14px;
+                font-size: 14px;
                 color: #4A4A4A;
             }
+
             li {
-                font-size:14px;
-                color: #808080;
+                font-size: 14px;
                 margin-top: 15px;
+                a {
+                    color: #808080;
+                    &:hover {
+                        color: blue;
+                    }
+                }
             }
+
         }
-        
+
         .addressmap {
             float: right;
             margin-right: 0;
-            img {
-                width: 470px;
+            width: 470px;
+            height: 270px;
+            >img {
+                height: 100%;
+                width: 100%;
             }
         }
 
-        
-    }
-    
 
-    
+    }
+
+
+
 }

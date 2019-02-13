@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "hbfont";
+  src: url(../font/PingFangMedium.ttf), url(../font/PingFangMedium.eot);
+}
+@font-face {
+  font-family: "hbfonten";
+  src: url(../font/RobotoThinItalic.ttf), url(../font/RobotoThinItalic.eot);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -15,17 +24,22 @@ body {
 a {
   text-decoration: none;
 }
+img {
+  border: 0px;
+}
 li {
   list-style: none;
 }
 .gb-container {
-  min-width: 1200px;
+  position: relative;
+  min-width: 1280px;
   overflow: visible;
   margin: 0 auto;
   height: 100%;
 }
 .gb-wrapper {
-  width: 1200px;
+  position: relative;
+  width: 1280px;
   margin: 0 auto;
 }
 .clearflaot::after {
@@ -74,11 +88,23 @@ header .header {
 }
 header .header .logo {
   float: left;
+  width: 130px;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  user-select: none;
+}
+header .header .logo a {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  z-index: 10;
 }
 header .header .logo img {
   position: relative;
-  height: 24px;
   top: 10px;
+  width: 100%;
+  height: 24px;
 }
 header .header .menu {
   float: right;
@@ -104,7 +130,7 @@ header .header .menu a::after {
   position: absolute;
   display: block;
   width: 0;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   height: 2px;
   background-color: #1D1F66;
@@ -119,7 +145,7 @@ header .header .menu .active a::after {
   display: block;
   width: 80%;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 10%;
   height: 2px;
   background-color: #1D1F66;
@@ -131,9 +157,11 @@ footer {
   border-top: 1px solid #E8EAED;
 }
 footer .foot {
+  box-sizing: border-box;
+  padding-left: 90px;
   position: relative;
   margin: 0 auto;
-  width: 1200px;
+  width: 1280px;
 }
 footer .foot .grid {
   float: left;
@@ -145,20 +173,28 @@ footer .foot .grid h3 {
 }
 footer .foot .grid li {
   font-size: 14px;
-  color: #808080;
   margin-top: 15px;
+}
+footer .foot .grid li a {
+  color: #808080;
+}
+footer .foot .grid li a:hover {
+  color: blue;
 }
 footer .foot .addressmap {
   float: right;
   margin-right: 0;
-}
-footer .foot .addressmap img {
   width: 470px;
+  height: 270px;
+}
+footer .foot .addressmap > img {
+  height: 100%;
+  width: 100%;
 }
 
 .blkcent {
   position: relative;
-  width: 1200px;
+  width: 1280px;
   margin: 0 auto;
 }
 .about {
@@ -173,17 +209,21 @@ footer .foot .addressmap img {
 .about .left {
   float: left;
   width: 550px;
+  margin-left: 50px;
+}
+.about .left .svglgogo {
+  width: 200px;
 }
 .about .left img {
   display: block;
   height: 50px;
 }
 .about .left h3 {
-  font-size: 50px;
+  font-size: 42px;
   color: #303030;
   line-height: 42px;
   margin-top: 30px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .about .left p {
   color: #666666;
@@ -221,10 +261,11 @@ footer .foot .addressmap img {
   transform: rotate(-45deg);
 }
 .video {
-  height: 500px;
+  height: 490px;
   background-color: #ddd;
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 0 50px #666666;
 }
 .video img {
   display: block;
@@ -232,7 +273,7 @@ footer .foot .addressmap img {
   height: 100%;
 }
 .foundingteam {
-  padding: 100px 0;
+  padding: 150px 0;
 }
 .foundingteam .title {
   text-align: center;
@@ -244,11 +285,13 @@ footer .foot .addressmap img {
 .foundingteam .title h2 {
   color: #4A4A4A;
   font-size: 32px;
-  margin-top: 15px;
-  font-weight: 500px;
+  margin-top: 5px;
+  font-weight: 400;
 }
 .foundingteam .card {
   margin-top: 76px;
+  box-sizing: border-box;
+  padding: 0 40px;
 }
 .foundingteam .card .bg {
   position: absolute;
@@ -284,9 +327,16 @@ footer .foot .addressmap img {
   position: relative;
   z-index: 10;
 }
+.foundingteam .card .carditem .name span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #4a4a4a;
+  line-height: 16px;
+  margin-left: 10px;
+}
 .foundingteam .card .carditem .posi {
   margin-left: 120px;
-  height: 50px;
+  height: 35px;
   color: #4A4A4A;
   font-size: 16px;
   margin-bottom: 30px;

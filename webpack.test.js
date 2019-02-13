@@ -36,7 +36,7 @@ module.exports = [{
                 }]
             },
             {
-                test: /\.(ttf)$/,
+                test: /\.(ttf|eot)$/,
                 use: [{
                     loader: "file-loader",
                     options: {
@@ -59,7 +59,7 @@ module.exports = [{
                 }]
             },
             {
-                test: /\.(txt|html)$/,
+                test: /\.(txt|html|art)$/,
                 use: 'raw-loader'
             }
         ]

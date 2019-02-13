@@ -1,10 +1,10 @@
 @font-face {
   font-family: "hbfont";
-  src: url(../font/PingFangMedium.ttf);
+  src: url(../font/PingFangMedium.ttf), url(../font/PingFangMedium.eot);
 }
 @font-face {
   font-family: "hbfonten";
-  src: url(../font/RobotoThinItalic.ttf);
+  src: url(../font/RobotoThinItalic.ttf), url(../font/RobotoThinItalic.eot);
 }
 
 * {
@@ -24,17 +24,22 @@ body {
 a {
   text-decoration: none;
 }
+img {
+  border: 0px;
+}
 li {
   list-style: none;
 }
 .gb-container {
-  min-width: 1200px;
+  position: relative;
+  min-width: 1280px;
   overflow: visible;
   margin: 0 auto;
   height: 100%;
 }
 .gb-wrapper {
-  width: 1200px;
+  position: relative;
+  width: 1280px;
   margin: 0 auto;
 }
 .clearflaot::after {
@@ -83,11 +88,23 @@ header .header {
 }
 header .header .logo {
   float: left;
+  width: 130px;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  user-select: none;
+}
+header .header .logo a {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  z-index: 10;
 }
 header .header .logo img {
   position: relative;
-  height: 24px;
   top: 10px;
+  width: 100%;
+  height: 24px;
 }
 header .header .menu {
   float: right;
@@ -113,7 +130,7 @@ header .header .menu a::after {
   position: absolute;
   display: block;
   width: 0;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   height: 2px;
   background-color: #1D1F66;
@@ -128,7 +145,7 @@ header .header .menu .active a::after {
   display: block;
   width: 80%;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 10%;
   height: 2px;
   background-color: #1D1F66;
@@ -140,9 +157,11 @@ footer {
   border-top: 1px solid #E8EAED;
 }
 footer .foot {
+  box-sizing: border-box;
+  padding-left: 90px;
   position: relative;
   margin: 0 auto;
-  width: 1200px;
+  width: 1280px;
 }
 footer .foot .grid {
   float: left;
@@ -154,20 +173,28 @@ footer .foot .grid h3 {
 }
 footer .foot .grid li {
   font-size: 14px;
-  color: #808080;
   margin-top: 15px;
+}
+footer .foot .grid li a {
+  color: #808080;
+}
+footer .foot .grid li a:hover {
+  color: blue;
 }
 footer .foot .addressmap {
   float: right;
   margin-right: 0;
-}
-footer .foot .addressmap img {
   width: 470px;
+  height: 270px;
+}
+footer .foot .addressmap > img {
+  height: 100%;
+  width: 100%;
 }
 
 .blkcent {
   position: relative;
-  width: 1200px;
+  width: 1280px;
   margin: 0 auto;
 }
 .morelink {
@@ -221,9 +248,9 @@ footer .foot .addressmap img {
 }
 .blk-frist p {
   text-align: center;
-  color: #3D3D3D;
+  color: #636363;
   font-size: 50px;
-  line-height: 80px;
+  line-height: 70px;
 }
 .blk-frist p span {
   color: #496DEC;
@@ -255,7 +282,7 @@ footer .foot .addressmap img {
   color: #4A4A4A;
   margin-top: 70px;
   line-height: 80px;
-  width: 328px;
+  width: 310px;
 }
 .product .device {
   position: relative;
@@ -276,9 +303,9 @@ footer .foot .addressmap img {
   bottom: 0;
 }
 .product .device .phe {
-  height: 80%;
+  height: 60%;
   left: 35%;
-  bottom: 0;
+  bottom: -10px;
 }
 .technology {
   padding-top: 170px;
@@ -290,24 +317,24 @@ footer .foot .addressmap img {
   color: #4A4A4A;
   text-align: center;
   margin: 0 auto;
-  line-height: 80px;
+  line-height: 70px;
 }
 .technology .link {
   text-align: center;
+  position: relative;
+  top: -20px;
 }
 .technology .merge {
   position: relative;
-  margin-left: -18px;
-  width: 1240px;
-  margin: 0 auto;
+  width: 1280px;
   margin-top: 100px;
-  margin-left: -15px;
+  text-align: center;
 }
 .technology .merge .tech {
   position: relative;
-  float: left;
-  width: 370px;
-  height: 170px;
+  display: inline-block;
+  width: 360px;
+  height: 155px;
   margin: 0 20px;
   background-color: #aaa;
   border-radius: 8px;
@@ -334,28 +361,44 @@ footer .foot .addressmap img {
 .boss {
   position: relative;
   padding: 100px 0;
+  text-align: center;
 }
 .boss .bossimg {
+  display: inline-block;
   width: 490px;
+  height: 365px;
+  margin-left: 50px;
+  font-size: 0;
+  vertical-align: top;
 }
 .boss .bossimg img {
   display: block;
   width: 100%;
 }
 .boss .bossinfo {
-  position: absolute;
-  margin-left: 600px;
-  top: 30px;
+  display: inline-block;
+  width: 260px;
+  margin-left: 120px;
+  text-align: left !important;
 }
 .boss .bossinfo h2 {
   color: #4A4A4A;
   font-size: 40px;
   font-weight: 500;
+  margin-top: 60px;
+}
+.boss .bossinfo h2 span {
+  font-size: 24px;
+  color: #8E8E8E;
+  margin-left: 10px;
 }
 .boss .bossinfo p {
   color: #4A4A4A;
   font-size: 20px;
   margin-top: 10px;
+}
+.boss .bossinfo .link {
+  margin-top: 50px;
 }
 .boss .bossinfo .schooling {
   position: relative;
@@ -370,12 +413,13 @@ footer .foot .addressmap img {
   padding: 0 18px;
 }
 .boss .bossinfo .company {
-  margin-top: 24px;
+  margin-top: 20px;
+  margin-left: -8px;
 }
 .boss .bossinfo .company img {
   display: inline-block;
   height: 40px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .companynews {
   padding-top: 100px;
@@ -395,6 +439,7 @@ footer .foot .addressmap img {
 }
 .companynews .news {
   margin-top: 80px;
+  padding-left: 100px;
 }
 .companynews .news .newsitem {
   float: left;

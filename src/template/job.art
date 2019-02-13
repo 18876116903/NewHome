@@ -1,0 +1,36 @@
+{{each data}}
+<div class="project">
+    <div class="title">
+        <h3>{{$value.group}}</h3>
+        <div class="opening">{{$value.list.length}} Opening</div>
+    </div>
+    <div class="prolist">
+
+        {{each $value.list val idx}}
+            <div class="enggroup">
+            <div class="gtil">{{val.title}}</div>
+            <div class="glist">
+                <div class="list">
+                    <label>岗位职责:</label>
+                    <ul>
+                        {{each val.responsibility resval residx}}
+                        <li>{{resval}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="list">
+                    <label>任职要求:</label>
+                    <ul>
+                        {{each val.requirements reqval reqidx}}
+                        <li>{{reqval}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="sendaddr">请将简历发送到邮箱hr@tigerobo</div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
+{{/each}}
