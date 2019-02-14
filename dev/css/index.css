@@ -288,7 +288,7 @@ footer .foot .addressmap > img {
   position: relative;
   float: right;
   width: 870px;
-  height: 550px;
+  height: 530px;
 }
 .product .device img {
   position: absolute;
@@ -299,11 +299,11 @@ footer .foot .addressmap > img {
   margin: 0 auto;
 }
 .product .device .pad {
-  width: 50%;
+  width: 43%;
   bottom: 0;
 }
 .product .device .phe {
-  height: 60%;
+  width: 190px;
   left: 35%;
   bottom: -10px;
 }
@@ -333,11 +333,12 @@ footer .foot .addressmap > img {
 .technology .merge .tech {
   position: relative;
   display: inline-block;
-  width: 360px;
+  width: 330px;
   height: 155px;
   margin: 0 20px;
   background-color: #aaa;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 50px #888888;
 }
 .technology .merge .tech img {
   width: 100%;
@@ -347,7 +348,6 @@ footer .foot .addressmap > img {
   top: 0;
   display: block;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.38) 0 2px 30px;
 }
 .technology .merge .tech p {
   display: none;
