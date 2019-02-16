@@ -40,3 +40,9 @@ function blkani(cls, step) {
     });
 }
 
+
+$(".mouse img").on("click", function () {
+    $("html, body").animate({
+        "scrollTop": $(window).height() * 0.9 + "px"
+    });
+})
