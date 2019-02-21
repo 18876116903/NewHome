@@ -15,7 +15,9 @@ render(app, {
 });
 
 
-app.use(static(__dirname + '/public'));
+app.use(static(__dirname + '/public', {
+    maxage: 24 * 3600 * 1000
+}));
 
 
 app.use(router.routes())
