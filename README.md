@@ -21,15 +21,3 @@ npm run build
 node app.js
 ```
 
-
-## 目录机构
-
-```
-├─font  字体
-├─js    js
-├─style  样式
-└─view   html静态资源
-    ├─css
-    ├─img
-    └─js
-```
