@@ -3,6 +3,7 @@ const path = require("path");
 const static = require('koa-static');
 const render = require('koa-art-template');
 
+// const config = require("./config");
 
 const Koa = require('koa')
 const app = new Koa()
@@ -22,5 +23,10 @@ app.use(static(__dirname + '/public', {
 
 app.use(router.routes())
 
-app.listen(5000);
-console.log("listen prot: 5000");
+app.listen(process.env.PORT);
+console.log(process.env.PORT)
+
+
+// app.listen(config.get("port"));
+// console.log(config.get("port"))
+
