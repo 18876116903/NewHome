@@ -1,2 +1,510 @@
-!function(t){var e={};function o(n){if(e[n])return e[n].exports;var r=e[n]={i:n,l:!1,exports:{}};return t[n].call(r.exports,r,r.exports,o),r.l=!0,r.exports}o.m=t,o.c=e,o.d=function(t,e,n){o.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},o.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},o.t=function(t,e){if(1&e&&(t=o(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var r in t)o.d(n,r,function(e){return t[e]}.bind(null,r));return n},o.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return o.d(e,"a",e),e},o.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},o.p="",o(o.s=17)}([function(t,e,o){},function(t,e,o){},function(t,e,o){},function(t,e,o){},function(t,e){t.exports=function(){var t=new BMap.Map("bdmap",{enableMapClick:!1}),e=new BMap.Point(121.441112,31.22588);t.centerAndZoom(e,16),t.enableScrollWheelZoom(!0);var o=new BMap.Marker(e);t.addOverlay(o),o.setAnimation(BMAP_ANIMATION_BOUNCE);var n=new BMap.Label("嘉春753E栋8楼",{offset:new BMap.Size(20,-10)});o.setLabel(n)}},function(t,e,o){},,,,,,,,,,,,function(t,e,o){o(0),o(1),o(2),o(3),o(5),o(18),o(4)(),$(".apps .donwload a").hover(function(){var t=$(this),e=t.attr("href"),o=t.find(".qrcode");0==o.length&&(o=$('<div class="qrcode"><p>请扫码下载</p><div></div></div>'),t.append(o),new QRCode(o.find("div").get(0),{text:e,width:110,height:110,colorDark:"#000000",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H})),o.show(),o.animate({bottom:"50px",opacity:1},200)},function(){var t=$(this).find(".qrcode");t.animate({bottom:"0",opacity:0},200,function(){t.hide()})}),$(".cshq").hover(function(){var t=$(this).find(".qrcode");t.show(),t.animate({bottom:"50px",opacity:1},200)},function(){var t=$(this).find(".qrcode");t.animate({bottom:"0",opacity:0},200,function(){t.hide()})});var n=$(".scrollongimg .searchresult"),r=$(".searchtext"),s=$(".searchmain"),a=($(".searchresult"),$(".textlist .list")),i=$(".iphonescroll .scroll"),c=600,l=200;function f(){var t=$(document).scrollTop(),e=n.height()-$(".scrollongimg").height()+c;$(".searchani").height(e+l),console.log(t),t>c&&t<c+l?(r.show().removeClass("searchtextshow"),s.show(),i.removeClass("showscroll")):t>c+l&&t<c+2*l&&(r.show().addClass("searchtextshow"),s.show(),i.removeClass("showscroll")),t>=c&&t<e?function(){var t=$(document).scrollTop(),e=$(window).width();if(i.css({position:"fixed",left:(e-1e3)/2+"px",top:"50%",marginTop:"-350px"}),t>=c+2*l){i.addClass("showscroll");var o=-(t-(c+2*l+100));o=o>0?0:o,n.css({transform:"translateY("+o+"px)"}),o<=0&&o>=-100?a.css({transform:"translateY(-400px)"}):o<=-400&&o>=-600?a.css({transform:"translateY(-800px)"}):o<=-1300&&o>=-1700?a.css({transform:"translateY(-1200px)"}):o<=-1700&&o>=-2e3&&a.css({transform:"translateY(-1600px)"})}}():(t<c&&(i.removeAttr("style"),n.css({transform:"translateY(0px)"}),a.css({transform:"translateY(0px)"}),r.removeClass("searchtextshow"),s.show()),t>e&&(i.removeAttr("style"),i.css({position:"absolute",left:"140px",bottom:"200px"}),n.css({transform:"translateY("+-(n.height()-$(".scrollongimg").height())+"px)"})))}$(window).on("scroll",function(t){f()}),f()},function(t,e,o){}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/products.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/js/products.js":
+/*!****************************!*\
+  !*** ./src/js/products.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../style/fontfamily.less */ "./src/style/fontfamily.less");
+__webpack_require__(/*! ../style/reset.less */ "./src/style/reset.less");
+__webpack_require__(/*! ../style/header.less */ "./src/style/header.less");
+__webpack_require__(/*! ../style/footer.less */ "./src/style/footer.less");
+__webpack_require__(/*! ../style/public.less */ "./src/style/public.less");
+__webpack_require__(/*! ../style/products.less */ "./src/style/products.less");
+
+var wheel = __webpack_require__(/*! ../modules/wheel2 */ "./src/modules/wheel2.js");
+var bdmap = __webpack_require__(/*! ../modules/bdmap */ "./src/modules/bdmap.js");
+
+
+bdmap();
+
+
+
+$(".apps .donwload a").hover(function () {
+    var a = $(this);
+    var href = a.attr("href");
+    var qrcode = a.find(".qrcode");
+    if (qrcode.length == 0) {
+        qrcode = $('<div class="qrcode"><p>请扫码下载</p><div></div></div>');
+        a.append(qrcode);
+        new QRCode(qrcode.find("div").get(0), {
+            text: href,
+            width: 110,
+            height: 110,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    }
+    qrcode.show();
+    qrcode.animate({
+        bottom: "50px",
+        opacity: 1,
+    }, 200);
+}, function () {
+    var qrcode = $(this).find(".qrcode");
+    qrcode.animate({
+        bottom: "0",
+        opacity: 0,
+    }, 200, function () {
+        qrcode.hide();
+    });
+})
+
+
+$(".cshq").hover(function () {
+    var qrcode = $(this).find(".qrcode");
+    qrcode.show();
+    qrcode.animate({
+        bottom: "50px",
+        opacity: 1,
+    }, 200);
+}, function () {
+    var qrcode = $(this).find(".qrcode");
+    qrcode.animate({
+        bottom: "0",
+        opacity: 0,
+    }, 200, function () {
+        qrcode.hide();
+    });
+})
+
+
+console.log("vvvvvvvvvvvvvvvvvv")
+window.onresize = function () {
+    console.log("aaaa")
+    wheel();
+}
+
+
+wheel();
+
+/***/ }),
+
+/***/ "./src/modules/bdmap.js":
+/*!******************************!*\
+  !*** ./src/modules/bdmap.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function () {
+
+    var map = new BMap.Map("bdmap",{enableMapClick:false});
+    var point = new BMap.Point(121.441112,31.22588);
+	map.centerAndZoom(point, 16);  // 初始化
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    var marker = new BMap.Marker(point);  // 创建标注
+	map.addOverlay(marker);               // 将标注添加到地图中
+	marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    var label = new BMap.Label("嘉春753E栋8楼",{offset:new BMap.Size(20,-10)});
+	marker.setLabel(label);
+
+}
+
+/***/ }),
+
+/***/ "./src/modules/wheel2.js":
+/*!*******************************!*\
+  !*** ./src/modules/wheel2.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var img = $(".scrollongimg .searchresult");
+var searchtext = $(".searchtext");
+var searchmain = $(".searchmain");
+var searchresult = $(".searchresult");
+var list = $(".textlist .list")
+var scroll = $(".iphonescroll .scroll");
+
+/**
+ * 
+ * 80
+ * 600
+ * 200
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+
+var baseX = 943;
+
+var txtH = 500;
+var stepN = 0;
+var fixH = 700; // 固定区高度
+var startH = 900; // 开始滚动的头部高度
+var step = 250;
+var clientHeight = document.body.clientHeight; // 页面可使区域高度
+var clientWidth = document.body.clientWidth;
+var sih = $(".scrollongimg").height()
+
+
+
+var scaleClass = 1;
+var scale = 1;
+if (clientHeight >= 700 && clientHeight < 800) {
+    scaleClass = "scale08";
+    scale = 0.8;
+}
+if (clientHeight >= 500 && clientHeight < 700) {
+    scaleClass = "scale07";
+    scale = 0.7;
+}
+
+// console.log(clientHeight, scaleClass)
+
+var fixMinTop = (clientHeight - fixH) / 2;
+
+var searchtext = $(".searchtext");
+var searchmain = $(".searchmain");
+var searchresult = $(".searchresult");
+var fixBox = $(".scroll");
+var searchani = $(".searchani");
+
+var longHeight = searchresult.height();
+var longTranH = longHeight - sih; // 503;
+
+// console.log("------------------------------")
+// console.log(longHeight, fixMinTop)
+
+var aniHeight = longHeight + step * 3 + 100 + (clientHeight - sih) / 2 + (fixMinTop * (scale));
+console.log(aniHeight)
+
+
+searchani.height(aniHeight)
+fixBox.addClass(scaleClass);
+
+// console.log("longHeight: " + longHeight)
+// console.log("aniHeight: " + aniHeight)
+
+module.exports = function () {
+    $(window).on("scroll", function (e) {
+        oniphonesrroll();
+    })
+    oniphonesrroll();
+}
+
+
+oniphonesrroll();
+
+
+function oniphonesrroll() {
+
+
+    clientWidth = document.body.clientWidth;
+    // console.log("clientWidth:" + clientWidth)
+    
+    
+    var top = $(document).scrollTop();
+    var ft = fixBox.offset()
+    scrollFixed(top);
+
+    // console.log(top)
+
+    if (top <= baseX + step * 1) {
+        // console.log("000000000000000")
+        searchtext.removeClass("searchtextshow");
+        searchresult.css({
+            transform: "translateY(0px)"
+        })
+    } else if (top > baseX + step * 1 && top <= baseX + step * 2) {
+        // 第一段 显示搜索文字，显示主界面，隐藏长图
+        // console.log("111111111111")
+        step1();
+    } else if (top >= baseX + step * 2 && top <= baseX + step * 3) {
+        // 第二段 过度界面
+        step2();
+    } else if (top >= baseX + step * 3 && top < aniHeight && (top - (baseX + step * 3)) < longTranH) {
+        // 开始滚动
+        // console.log("33333333333", top)
+        step3(top - (baseX + step * 3));
+    } else if ((top - (baseX + step * 0)) >= longTranH) {
+        // console.log("444444444444")
+        step4(top);
+
+    }
+}
+
+
+function scrollFixed(top) {
+    var fo = fixBox.offset()
+    var t = fo.top - top;
+
+    if (top < 800) {
+        fixed(1)
+    }
+
+    // console.log(top, fixMinTop, baseX)
+    if (top + fixMinTop >= baseX) {
+        fixed(2)
+    }
+
+}
+
+
+function fixed(type) {
+    // 初始位置
+    if (type == 1) {
+        fixBox.removeAttr("style");
+    } else if (type == 2) { // fixed
+        fixBox.css({
+            position: "fixed",
+            left: (clientWidth - 1000) / 2 + "px",
+            top: "50%",
+            marginTop: "-350px"
+        })
+    } else { // 尾部
+
+    }
+}
+
+
+
+function step1() {
+    searchtext.show();
+    searchtext.addClass("searchtextshow");
+    searchmain.css({
+        opacity: 1
+    }, 500)
+    searchresult.css({
+        opacity: 0
+    }, 300)
+}
+
+
+function step2() {
+    searchtext.hide().removeClass("searchtextshow");
+    searchmain.css({
+        opacity: 0
+    }, 500)
+    searchresult.css({
+        opacity: 1
+    }, 300)
+}
+
+function step3(top) {
+    step2();
+    searchresult.css({
+        transform: "translateY(" + -top + "px)"
+    })
+
+    if (top >= 0 && top < 200) {
+        list.css({
+            transform: "translateY(" + -txtH + "px)"
+        })
+    } else if (top >= 200 && top < 1300) {
+        list.css({
+            transform: "translateY(" + -txtH * 2 + "px)"
+        })
+    } else if (top >= 1300 && top < 2000) {
+        list.css({
+            transform: "translateY(" + -txtH * 3 + "px)"
+        })
+    } else if (top >= 2000 && top < 2500) {
+        list.css({
+            transform: "translateY(" + -txtH * 4 + "px)"
+        })
+    }
+
+}
+
+
+var tempy = 0;
+
+function step4(top) {
+    var tt = (top + fixMinTop) - baseX;
+    if (!tempy) {
+        tempy = tt;
+    } else {
+        tt = tempy;
+    }
+    step2();
+    console.log("tt:" + tt)
+    fixBox.removeAttr("style");
+    searchresult.css({
+        transform: "translateY(" + -longTranH + "px)"
+    })
+    fixBox.css({
+        position: "absolute",
+        left: "140px",
+        "top": tt + "px",
+        // bottom: fixMinTop + "px"
+    });
+
+
+
+}
+
+
+
+
+// module.exports = function () {
+//     document.onmousewheel = function(e){
+//         console.log(e.wheelDelta)
+//         e.preventDefault();
+//         e.stopPropagation();
+//     }
+// }
+
+/***/ }),
+
+/***/ "./src/style/fontfamily.less":
+/*!***********************************!*\
+  !*** ./src/style/fontfamily.less ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/style/footer.less":
+/*!*******************************!*\
+  !*** ./src/style/footer.less ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/style/header.less":
+/*!*******************************!*\
+  !*** ./src/style/header.less ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/style/products.less":
+/*!*********************************!*\
+  !*** ./src/style/products.less ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/style/public.less":
+/*!*******************************!*\
+  !*** ./src/style/public.less ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/style/reset.less":
+/*!******************************!*\
+  !*** ./src/style/reset.less ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ })
+
+/******/ });
 //# sourceMappingURL=products.js.map

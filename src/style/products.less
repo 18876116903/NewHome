@@ -1,3 +1,7 @@
+body {
+    // overflow: hidden;
+}
+
 .head {
     position: relative;
     margin-top: 76px;
@@ -38,11 +42,11 @@
         p {
             width: 420px;
             color: #666666;
-            line-height: 25px;
             margin-top: 15px;
             font-size: 20px;
             font-weight: 400;
             margin-top: 35px;
+            line-height:32px;
         }
 
         button {
@@ -71,6 +75,12 @@
     width: 200px !important;
 }
 
+.scale08 {
+    transform: scale(0.8)
+}
+.scale07 {
+    transform: scale(0.7)
+}
 .showscroll {
     .searchtext,
     .searchmain {
@@ -87,7 +97,8 @@
     height: 100%;
     box-sizing: border-box;
     padding: 165px 0;
-    height: 2000px;
+    min-height: 2000px;
+    overflow: hidden;
 
 
     h2 {
@@ -108,7 +119,7 @@
     }
 
     .scroll {
-        height: 700px;
+        height: 800px;
         position: relative;
         width: 1000px;
         margin: 0 auto;
@@ -117,7 +128,7 @@
 
     .absiphone {
         position: absolute;
-        width: 50%;
+        width: 556px;
         overflow: hidden;
 
         >img {
@@ -146,34 +157,34 @@
             .searchtext {
                 z-index: 10;
                 position: absolute;
-                font-size: 14px;
-                height: 16px;
-                left: 32px;
-                top: 187px;
+                font-size: 15px;
+                height: 20px;
+                left: 11%;
+                top: 37.3%;
                 width: 0;
                 white-space: nowrap;
                 overflow: hidden;
-                transition-duration: 0.35s;
+                transition-duration: 0.5s;
             }
 
             .searchmain {
                 z-index: 5;
                 height: 100%;
                 opacity: 1;
-                transition-duration: 0.35s;
+                transition-duration: 0.2s;
             }
 
             .searchresult {
                 z-index: 1;
                 opacity: 0;
-                transition-duration: 0.35s;
+                transition-duration: 0.10s;
             }
         }
     }
 
     .abstext {
         position: absolute;
-        left: 50%;
+        left: 55%;
         width: 45%;
         top: 0;
         // border: 1px solid red;
@@ -181,13 +192,23 @@
 
         .textlist {
             position: relative;
-            height: 370px;
+            height: 500px;
+            top: 30px;
             overflow: hidden;
-            top: 100px;
+            // border: 1px solid red;
+
+            .frist {
+                h3 {
+                    height: 80px;
+                }
+                p {
+                    font-size: 20px !important;
+                }
+            }
 
             .item {
                 height: 300px;
-                padding: 50px 0;
+                padding: 130px 0 70px 0;
 
                 h3 {
                     font-size: 30px;
@@ -198,11 +219,11 @@
                 }
 
                 p {
-                    font-size: 20px;
+                    font-size: 16px;
                     font-weight: 400;
                     color: rgba(74, 74, 74, 1);
                     line-height: 32px;
-                    margin-top: 25px;
+                    margin-top: 24px;
                 }
             }
 
@@ -210,10 +231,10 @@
                 display: block;
                 position: absolute;
                 width: 100%;
-                height: 50px;
+                height: 100px;
                 left: 0;
                 z-index: 10;
-                display: none;
+                // display: none;
             }
 
             .linertop {
@@ -226,12 +247,12 @@
         }
 
         .list {
-            transition-duration: 0.35s;
+            transition-duration: 1s;
         }
 
         button {
             position: absolute;
-            bottom: 160px;
+            bottom: 25%;
             width: 220px;
             height: 60px;
             background-color: #FA2B56;
@@ -240,10 +261,11 @@
             border-radius: 5px;
             outline: none;
             border: none;
-            margin-top: 60px;
+            // margin-top: 60px;
             font-size: 22px;
             color: rgba(255, 255, 255, 1);
             transition-duration: 0.3s;
+            z-index: 20;
             cursor: pointer;
 
             &:hover {
@@ -335,7 +357,6 @@
     padding-top: 180px;
 
     .title {
-        width: 394px;
         height: 84px;
         font-size: 30px;
         font-weight: 400;
