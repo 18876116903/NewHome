@@ -51,15 +51,25 @@ var searchmain = $(".searchmain");
 var searchresult = $(".searchresult");
 var fixBox = $(".scroll");
 var searchani = $(".searchani");
+var scrollpoint = $(".scrollpoint");
+
+
+
 
 var longHeight = searchresult.height();
 var longTranH = longHeight - sih; // 503;
-
-// console.log("------------------------------")
-// console.log(longHeight, fixMinTop)
-
 var aniHeight = longHeight + step * 3 + 100 + (clientHeight - sih) / 2 + (fixMinTop * (scale));
-console.log(aniHeight)
+
+
+function resize() {
+    // console.log("clientHeight: " + clientHeight)
+    clientWidth = document.body.clientWidth;
+    scrollpoint.css({
+        transform: "translateX(" + (Math.round((clientWidth - 1000) / 2 - 56)) + "px)"
+    })
+    // scrollpoint.show();
+}
+
 
 
 searchani.height(aniHeight)
@@ -69,6 +79,17 @@ fixBox.addClass(scaleClass);
 // console.log("aniHeight: " + aniHeight)
 
 module.exports = function () {
+    searchresult.on("load", function () {
+        console.log("llllllllllllllll")
+        longHeight = searchresult.height();
+        longTranH = longHeight - sih; // 503;
+        aniHeight = longHeight + step * 3 + 100 + (clientHeight - sih) / 2 + (fixMinTop * (scale));
+        searchani.height(aniHeight)
+    })
+
+    resize();
+    // console.log("------------------")
+
     $(window).on("scroll", function (e) {
         oniphonesrroll();
     })
@@ -84,8 +105,8 @@ function oniphonesrroll() {
 
     clientWidth = document.body.clientWidth;
     // console.log("clientWidth:" + clientWidth)
-    
-    
+
+
     var top = $(document).scrollTop();
     var ft = fixBox.offset()
     scrollFixed(top);
@@ -160,6 +181,7 @@ function step1() {
     searchresult.css({
         opacity: 0
     }, 300)
+    scrollpoint.find("li").removeClass("scrollpoint-active");
 }
 
 
@@ -171,6 +193,7 @@ function step2() {
     searchresult.css({
         opacity: 1
     }, 300)
+    scrollpoint.find("li").removeClass("scrollpoint-active");
 }
 
 function step3(top) {
@@ -183,18 +206,24 @@ function step3(top) {
         list.css({
             transform: "translateY(" + -txtH + "px)"
         })
+        scrollpoint.find("li").removeClass("scrollpoint-active").eq(0).addClass("scrollpoint-active");
     } else if (top >= 200 && top < 1300) {
         list.css({
             transform: "translateY(" + -txtH * 2 + "px)"
         })
+        scrollpoint.find("li").removeClass("scrollpoint-active").eq(1).addClass("scrollpoint-active");
     } else if (top >= 1300 && top < 2000) {
         list.css({
             transform: "translateY(" + -txtH * 3 + "px)"
         })
+        scrollpoint.find("li").removeClass("scrollpoint-active").eq(2).addClass("scrollpoint-active");
     } else if (top >= 2000 && top < 2500) {
         list.css({
             transform: "translateY(" + -txtH * 4 + "px)"
         })
+        scrollpoint.find("li").removeClass("scrollpoint-active").eq(3).addClass("scrollpoint-active");
+    } else {
+        scrollpoint.find("li").removeClass("scrollpoint-active");
     }
 
 }

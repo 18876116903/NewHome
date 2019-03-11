@@ -1,9 +1,12 @@
+const webpack = require("webpack");
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = [{
-    mode: 'production',        // production development
+    mode: 'production', // production development
     entry: {
         'index': './src/js/index.js',
         'about': './src/js/about.js',
@@ -85,7 +88,37 @@ module.exports = [{
                 to: './public/favicon.ico',
                 toType: 'file'
             }
-        ])
-    ]
+        ]),
+        // new UglifyJsPlugin({
+        //     uglifyOptions: {
+        //         compress: {
+        //             warnings: false,
+        //             drop_debugger: true,
+        //             drop_console: true
+        //         }
+        //     },
+        //     parallel: true
+        // })
+    ],
+
+
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                parallel: true,
+                sourceMap: true,
+                terserOptions: {
+                    ie8: true,
+                    ecma: 5,
+                    compress: {
+                        drop_console: true,
+                        drop_debugger: true
+                    }
+                }
+            })
+        ]
+    },
+
 
 }]

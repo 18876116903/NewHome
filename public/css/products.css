@@ -88,7 +88,7 @@ header .header {
 }
 header .header .logo {
   float: left;
-  width: 130px;
+  width: 200px;
   height: 100%;
   box-sizing: border-box;
   overflow: hidden;
@@ -104,7 +104,7 @@ header .header .logo img {
   position: relative;
   top: 10px;
   width: 100%;
-  height: 24px;
+  height: 30px;
 }
 header .header .menu {
   float: right;
@@ -335,18 +335,20 @@ footer .foot .addressmap > img {
 .searchani .absiphone > img {
   width: 100%;
   display: block;
+  position: relative;
+  z-index: 20;
 }
 .searchani .absiphone .scrollongimg {
   position: absolute;
-  border: 1px solid #999999;
   background-color: #fff;
   border-radius: 2px;
-  left: 11.5%;
-  top: 12%;
-  width: 57.3%;
-  height: 61.5%;
+  left: 11.4%;
+  top: 4.16%;
+  width: 57.7%;
+  height: 76.5%;
   box-sizing: border-box;
   overflow-y: hidden;
+  z-index: 10;
 }
 .searchani .absiphone .scrollongimg img {
   position: absolute;
@@ -359,7 +361,7 @@ footer .foot .addressmap > img {
   font-size: 15px;
   height: 20px;
   left: 11%;
-  top: 37.3%;
+  top: 38.55%;
   width: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -375,6 +377,7 @@ footer .foot .addressmap > img {
   z-index: 1;
   opacity: 0;
   transition-duration: 0.1s;
+  margin-top: 8px;
 }
 .searchani .abstext {
   position: absolute;
@@ -382,6 +385,7 @@ footer .foot .addressmap > img {
   width: 45%;
   top: 0;
   height: 100%;
+  z-index: 50;
 }
 .searchani .abstext .textlist {
   position: relative;
@@ -430,11 +434,13 @@ footer .foot .addressmap > img {
 .searchani .abstext .list {
   transition-duration: 1s;
 }
-.searchani .abstext button {
+.searchani .abstext .get {
   position: absolute;
   bottom: 25%;
   width: 220px;
   height: 60px;
+  line-height: 60px;
+  text-align: center;
   background-color: #FA2B56;
   background: linear-gradient(225deg, #fa2b56 0%, #f91c3d 100%);
   box-shadow: 20px 20px 60px 0px rgba(0, 0, 0, 0.4);
@@ -447,11 +453,33 @@ footer .foot .addressmap > img {
   z-index: 20;
   cursor: pointer;
 }
-.searchani .abstext button:hover {
+.searchani .abstext .get:hover {
   opacity: 0.8;
 }
 .searchani .scrollongimg {
   position: absolute;
+}
+.scrollpoint {
+  position: absolute;
+  display: none;
+  z-index: 999;
+  left: 100%;
+  width: 15px;
+  height: 200px;
+  top: 50%;
+  margin-top: -150px;
+}
+.scrollpoint ul li {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  list-style: none;
+  margin-bottom: 30px;
+  transition-duration: 0.35s;
+}
+.scrollpoint-active {
+  background-color: #aaa !important;
 }
 .search {
   text-align: center;
@@ -569,6 +597,7 @@ footer .foot .addressmap > img {
   position: relative;
   text-align: center;
   margin-top: 25px;
+  height: 39px;
 }
 .apps .grid3 .donwload a {
   position: relative;
@@ -588,6 +617,16 @@ footer .foot .addressmap > img {
   height: 100%;
   top: 0;
   left: 0;
+}
+.apps .grid3 .goty {
+  position: relative;
+  text-align: center;
+  margin-top: 25px;
+  height: 39px;
+}
+.apps .grid3 .goty a {
+  font-size: 20px;
+  color: #496dec;
 }
 .apps .grid3 .view {
   width: 245px;
@@ -683,6 +722,9 @@ footer .foot .addressmap > img {
   width: 100;
   height: 100%;
 }
+.apps2 {
+  padding-top: 105px !important;
+}
 .ai2 {
   padding: 150px 0;
 }
@@ -715,7 +757,7 @@ footer .foot .addressmap > img {
   margin: 0 20px;
   margin-bottom: 40px;
   width: 600px;
-  padding: 30px;
+  padding: 30px 50px;
   box-sizing: border-box;
   border: 1px solid #F3F3F3;
   transition-duration: 0.25s;
@@ -723,7 +765,7 @@ footer .foot .addressmap > img {
 .ai2 .grid .item img {
   height: 50px;
   position: absolute;
-  left: 30px;
+  left: 50px;
   right: 30px;
 }
 .ai2 .grid .item h3 {
