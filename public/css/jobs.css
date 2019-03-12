@@ -353,6 +353,10 @@ footer .foot .addressmap > img {
   transform: rotate(-135deg);
   top: 10px;
 }
+.blkcent {
+  box-sizing: border-box;
+  padding: 0 20px;
+}
 
 
 /*# sourceMappingURL=jobs.css.map*/
