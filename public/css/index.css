@@ -153,7 +153,7 @@ header .header .menu .active a::after {
 
 footer {
   position: relative;
-  padding: 100px 0;
+  padding-top: 100px;
   border-top: 1px solid #E8EAED;
 }
 footer .foot {
@@ -190,6 +190,19 @@ footer .foot .addressmap {
 footer .foot .addressmap > img {
   height: 100%;
   width: 100%;
+}
+footer .icp {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+  border-top: 1px solid #E8EAED;
+}
+footer .icp img {
+  margin-left: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
 }
 
 .blkcent {
