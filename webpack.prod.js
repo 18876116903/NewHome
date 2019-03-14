@@ -5,6 +5,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 
+
+const output = "public/assets/";
+
 module.exports = [{
     mode: 'production', // production development
     entry: {
@@ -16,7 +19,7 @@ module.exports = [{
     },
     output: {
         path: path.join(__dirname, ""),
-        filename: 'public/js/[name].js',
+        filename: output + '/js/[name].js',
     },
     devtool: 'source-map',
     module: {
@@ -42,7 +45,7 @@ module.exports = [{
                     loader: "file-loader",
                     options: {
                         name: "[name].[ext]",
-                        outputPath: "/public/font",
+                        outputPath: output + "/font",
                         publicPath: "../font"
                     }
                 }]
@@ -69,26 +72,26 @@ module.exports = [{
 
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'public/css/[name].css',
+            filename: output + '/css/[name].css',
             chunkFilename: '[id].css',
-            publicPath: "aaa"
+            // publicPath: "aaa"
         }),
 
-        new CopyWebpackPlugin([{
-                from: './src/view/img/',
-                to: './public/img/',
-                toType: 'dir'
-            },
-            {
-                from: './src/view/js/',
-                to: './public/js/',
-                toType: 'dir'
-            }, {
-                from: './src/view/favicon.ico',
-                to: './public/favicon.ico',
-                toType: 'file'
-            }
-        ]),
+        // new CopyWebpackPlugin([{
+        //         from: './src/view/img/',
+        //         to: './public/img/',
+        //         toType: 'dir'
+        //     },
+        //     {
+        //         from: './src/view/js/',
+        //         to: './public/js/',
+        //         toType: 'dir'
+        //     }, {
+        //         from: './src/view/favicon.ico',
+        //         to: './public/favicon.ico',
+        //         toType: 'file'
+        //     }
+        // ]),
     ],
 
 

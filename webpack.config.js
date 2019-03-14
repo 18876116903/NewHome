@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const output = "public/accest/";
+const output = "public/assets/";
 
 module.exports = [{
     mode: 'development',
@@ -72,7 +72,7 @@ module.exports = [{
         new MiniCssExtractPlugin({
             filename: output + '/css/[name].css',
             chunkFilename: '[id].css',
-            publicPath: "aaa"
+            // publicPath: "aaa"
         }),
 
         // new CopyWebpackPlugin([{

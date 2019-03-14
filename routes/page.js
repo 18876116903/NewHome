@@ -7,6 +7,12 @@ router.get('', async (ctx, next) => {
         active: -1
     });
 });
+router.get('index.html', async (ctx, next) => {
+    await ctx.render('layouts/index', {
+        title: "虎博科技",
+        active: -1
+    });
+});
 
 router.get("technology", async (ctx, next) => {
     await ctx.render('layouts/technology', {

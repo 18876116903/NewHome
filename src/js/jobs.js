@@ -33,7 +33,7 @@ $(".engineering").on("click", ".enggroup .gtil", function () {
 })
 
 
-$.get("./accest/json/job.json", function (msg) {
+$.get("./assets/json/job.json", function (msg) {
     var html = arttemplate.render(template, msg);
     $(".engineering .blkcent").html(html)
 })
