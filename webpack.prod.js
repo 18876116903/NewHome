@@ -89,16 +89,6 @@ module.exports = [{
                 toType: 'file'
             }
         ]),
-        // new UglifyJsPlugin({
-        //     uglifyOptions: {
-        //         compress: {
-        //             warnings: false,
-        //             drop_debugger: true,
-        //             drop_console: true
-        //         }
-        //     },
-        //     parallel: true
-        // })
     ],
 
 
