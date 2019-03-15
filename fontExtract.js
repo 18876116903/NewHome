@@ -77,7 +77,7 @@ function glyph(txt) {
                 }))
                 .use(Fontmin.ttf2eot()) // eot 转换插件
                 .use(Fontmin.ttf2woff()) // woff 转换插件    
-                .dest('./public/assets/font') // 输出位置
+                .dest('./public/font') // 输出位置
 
             fontmin.run(function (err, files) {
                 if (err) {
