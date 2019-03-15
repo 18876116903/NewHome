@@ -197,9 +197,11 @@ footer .icp {
   padding: 20px;
   background-color: #ffffff;
   border-top: 1px solid #E8EAED;
+  font-size: 13px;
+  color: #666666;
 }
 footer .icp img {
-  height: 16px;
+  height: 14px;
   display: inline-block;
   vertical-align: middle;
   margin-left: 20px;
@@ -320,7 +322,7 @@ footer .icp img {
 .foundingteam .card .carditem {
   position: relative;
   width: 570px;
-  height: 530px;
+  height: 500px;
   box-sizing: border-box;
   padding: 45px 55px;
   background-color: #fff;
